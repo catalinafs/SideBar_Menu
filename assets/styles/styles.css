@@ -24,15 +24,15 @@ body {
 }
 
 .Navigation {
-    position: fixed;
     width: 75px;
     inset: 40px 0px 40px 20px;
-    background-color: var(--2);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.5s;
+    background-color: var(--2);
     border-radius: 12px;
+    transition: 0.5s;
+    position: fixed;
 }
 
 .Navigation.ActiveToggle {
@@ -40,27 +40,27 @@ body {
 }
 
 .MenuToggle {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 60px;
     padding: 0 23px;
-    border-bottom: 1px solid var(--2);
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--2);
+    position: absolute;
+    top: 0;
+    left: 0;
     cursor: pointer;
 }
 
 .MenuToggle::before {
     content: ' ';
-    position: absolute;
     width: 25px;
     height: 2px;
     background-color: var(--4);
     transform: translateY(-8px);
     transition: 0.5s;
+    position: absolute;
 }
 
 .Navigation.ActiveToggle .MenuToggle::before{
@@ -69,13 +69,13 @@ body {
 
 .MenuToggle::after {
     content: ' ';
-    position: absolute;
     width: 20px;
     height: 2px;
     background-color: var(--4);
     transform: translateY(8px);
-    box-shadow: 0 -8px 0 var(--4);
     box-sizing: 4px;
+    box-shadow: 0 -8px 0 var(--4);
+    position: absolute;
     transition: 0.5s;
 }
 
@@ -93,9 +93,9 @@ body {
     width: 100%;
     height: 76px;
     list-style: none;
-    position: relative;
-    border-radius: 12px;
     border: 8px solid transparent;
+    border-radius: 12px;
+    position: relative;
     transition: 0.5s;
 }
 
@@ -108,13 +108,12 @@ body {
     content: ' ';
     width: 10%;
     height: 33%;
-    position: absolute;
-    top: -28px;
-    right: -10px;
-    /* background-color: #f1f1f1; */
     background-color: transparent;
     border-bottom-right-radius: 20px;
     box-shadow: 6px 5px 0 5px var(--1);
+    position: absolute;
+    top: -28px;
+    right: -10px;
     transform: scale(0);
     transform-origin: bottom right;
     transition: 0.5s;
@@ -129,12 +128,12 @@ body {
     content: ' ';
     width: 10%;
     height: 33%;
-    position: absolute;
-    bottom: -28px;
-    right: -10px;
     background-color: transparent;
     border-top-right-radius: 20px;
     box-shadow: 6px -3px 0 3px var(--1);
+    position: absolute;
+    bottom: -28px;
+    right: -10px;
     transform: scale(0);
     transform-origin: bottom right;
     transition: 0.5s;
@@ -146,13 +145,13 @@ body {
 }
 
 .Navigation ul li a {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
     text-decoration: none;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
     z-index: 1000;
 }
 
@@ -162,9 +161,9 @@ body {
     font-size: 1.75em;
     line-height: 60px;
     display: block;
-    position: relative;
     border-radius: 10px;
     border: 6px solid transparent;
+    position: relative;
     transition: 0.5s;
 }
 
@@ -176,13 +175,13 @@ body {
     content: ' ';
     width: 100%;
     height: 25%;
+    background-color: var(--color);
+    filter: blur(6px);
+    transition: 0.5s;
     position: absolute;
     bottom: -12px;
     left: 0;
-    background-color: var(--color);
-    filter: blur(6px);
     opacity: 0;
-    transition: 0.5s;
 }
 
 .Navigation ul li.Active a .Icon::before{
@@ -193,29 +192,29 @@ body {
     content: ' ';
     width: 15px;
     height: 15px;
-    position: absolute;
-    top: 10px;
-    left: -56px;
     background-color: var(--color);
     border: 6px solid var(--1);
     border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: -56px;
 
 }
 
 .Navigation ul li a .Text {
-    position: relative;
+    visibility: hidden;
     padding: 0 15px;
     color: var(--1);
     display: flex;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
     transition: 0.5s;
+    opacity: 0;
+    position: relative;
 }
 
 .Navigation.ActiveToggle ul li a .Text {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
 }
 
 .Navigation ul li.Active a .Text{
